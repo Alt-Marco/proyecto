@@ -26,7 +26,40 @@
         </ul>
     </header>
     <img src="img/logo.png" alt="logo" id="logoPrincipal">
-    
+
+    <section id="servicios">
+        <h2>Especialidades</h2>
+    </section>
+
+    <section id="equipo">
+        <h2>Conoce a Nuestros Dentistas</h2>
+    </section>
+
+    <section id="citas">
+        <h2>Solicitar Cita</h2>
+        <form id="citaForm">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" required>
+
+            <label for="especialidad">Especialidad Requerida:</label>
+            <select id="especialidad" required>
+                <option value="">Seleccione una...</option>
+                <option value="Ortodoncia">Ortodoncia</option>
+                <option value="Endodoncia">Endodoncia</option>
+                <option value="Cirugía">Cirugía Maxilofacial</option>
+                <option value="Periodoncia">Periodoncia</option>
+                <option value="Odontopediatría">Odontopediatría</option>
+            </select>
+
+            <button type="submit">Enviar Solicitud</button>
+            <p id="mensaje"></p>
+        </form>
+    </section>
+
+
     <footer>
         <h2>Contacto:</h2>
         <ul>
