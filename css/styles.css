@@ -1,62 +1,180 @@
-  body {    
+/* --- INICIO FASE 1: DISPOSICIÓN Y ESTRUCTURA --- */
+
+body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #586885;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
     color: #333;
-}  
-header {
-    background-color: #B3CEFF;  
-    color: #000;
-    padding: 25px 0;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+
+header {
+    background-color: #B3CEFF;
+    color: #000;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.headerMenu {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+#logoPrincipal {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px;
+    height: auto;
+}
+
 section {
     padding: 40px 20px;
     text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #2a4d8f;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#especialidades {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#especialidades li {
     background-color: #B3CEFF;
-}section h2 {
-    color: #2a4d8f; 
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    text-align: center;
+    flex-basis: auto;
+}
+
+#equipo ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.doctor {
+    background-color: #f4f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.doctor img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 10px;
 }
-h2 {
-    text-align: left;
-    margin-left: 20px;
 
-}
-h3  {
+#citaForm {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     text-align: left;
-    
+}
 
-}
-li {
-    list-style-type: none;
-    text-align: left;
-}
-    section p {
-    font-size: 1.1rem;
+#citaForm label, #citaForm input, #citaForm select, #citaForm button {
+    width: 100%;
 }
 
 footer {
-    background-color: #B3CEFF;
-    color: #000;
+    background-color: #2a4d8f;
+    color: #fff;
     text-align: center;
-    padding: 15px ;
-    margin-top: 40px;
+    padding: 30px 20px;
+    margin-top: 0;
 }
+
+footer h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contactos {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#contactos li {
+    text-align: center;
+    flex-basis: 300px;
+}
+
+#contactos li h3 {
+    color: #B3CEFF;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#contactos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 footer a {
-    color: #2a4d8f;
+    color: #B3CEFF;
     text-decoration: none;
+    display: block;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
-</style>
-    </footer>
-</body>
-</html>
 
+h2 {
+    text-align: center !important;
+    margin-left: 0 !important;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* --- FIN FASE 1: DISPOSICIÓN Y ESTRUCTURA --- */
