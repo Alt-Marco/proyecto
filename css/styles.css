@@ -1,61 +1,97 @@
-/* --- INICIO FASE 1: DISPOSICIÓN Y ESTRUCTURA --- */
+:root {
+    --primary-color: #2a4d8f;
+    --secondary-color: #B3CEFF;
+    --background-light: #f4f7fa;
+    --text-dark: #1a396b;
+    --success-color: #38c172;
+    --white: #ffffff;
+    --shadow-light: rgba(0,0,0,0.08);
+}
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background-light);
     color: #333;
+    line-height: 1.6;
+}
+
+li {
+    list-style-type: none;
+    text-align: inherit;
+}
+
+h2 {
+    text-align: center;
+    margin-left: 0;
+}
+
+h3 {
+    text-align: center;
 }
 
 header {
-    background-color: #B3CEFF;
-    color: #000;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 4px 10px var(--shadow-light);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 header ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 15px 0 0;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .headerMenu {
     cursor: pointer;
-    font-weight: bold;
-    padding: 5px 10px;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: #e0e6f0;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.headerMenu:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 #logoPrincipal {
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     max-width: 150px;
     height: auto;
 }
 
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: var(--white);
+    margin: 30px auto;
+    max-width: 1100px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px var(--shadow-light);
 }
 
 section h2 {
-    color: #2a4d8f;
-    margin-bottom: 25px;
-    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    font-size: 2.2rem;
     text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 #especialidades {
@@ -64,68 +100,141 @@ section h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
 }
 
 #especialidades li {
-    background-color: #B3CEFF;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 500;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
     text-align: center;
-    flex-basis: auto;
+    cursor: default;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#especialidades li:hover {
+    background-color: #92b8ff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
 #equipo ul {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
 .doctor {
-    background-color: #f4f7fa;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e6f0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.doctor:hover {
+    box-shadow: 0 10px 20px rgba(42, 77, 143, 0.25);
+    transform: translateY(-5px);
 }
 
 .doctor img {
-    width: 100%;
-    max-height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 10px;
+    border: 5px solid var(--secondary-color);
+    margin: 0 auto 15px;
+    transition: border-color 0.3s ease;
+}
+
+.doctor:hover img {
+    border-color: var(--primary-color);
+}
+
+.doctor h4 {
+    color: var(--primary-color);
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+}
+
+.doctor p {
+    font-style: italic;
+    color: #666;
+    margin: 0;
 }
 
 #citaForm {
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
     text-align: left;
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-#citaForm label, #citaForm input, #citaForm select, #citaForm button {
+#citaForm label {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+#citaForm input, #citaForm select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
     width: 100%;
+    box-sizing: border-box;
+}
+
+#citaForm button[type="submit"] {
+    background-color: var(--success-color);
+    color: var(--white);
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+#citaForm button[type="submit"]:hover {
+    background-color: #2d995b;
+    transform: translateY(-2px);
 }
 
 footer {
-    background-color: #2a4d8f;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
     margin-top: 0;
+    border-top: 5px solid var(--secondary-color);
 }
 
 footer h2 {
-    color: #ffffff;
-    margin-bottom: 20px;
+    color: var(--white);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
     text-align: center;
+    border-bottom: none;
 }
 
 #contactos {
@@ -140,41 +249,137 @@ footer h2 {
 #contactos li {
     text-align: center;
     flex-basis: 300px;
+    padding: 10px;
 }
 
 #contactos li h3 {
-    color: #B3CEFF;
+    color: var(--secondary-color);
     margin-bottom: 5px;
-    text-align: center;
+    font-size: 1.2rem;
 }
 
 #contactos ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 5px 0 0;
 }
 
 footer a {
-    color: #B3CEFF;
+    color: var(--secondary-color);
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    padding: 2px 0;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 footer a:hover {
     text-decoration: underline;
+    color: var(--white);
 }
 
-h2 {
-    text-align: center !important;
-    margin-left: 0 !important;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
 }
 
-h3 {
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 
-li {
-    list-style-type: none;
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
 }
 
-/* --- FIN FASE 1: DISPOSICIÓN Y ESTRUCTURA --- */
+.modal-content h2 {
+    color: var(--success-color);
+    font-size: 1.8rem;
+    margin-top: 0;
+    border-bottom: none;
+    display: block;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-cerrar-modal {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-cerrar-modal:hover {
+    background-color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .headerMenu {
+        padding: 5px 0;
+    }
+    #equipo ul {
+        grid-template-columns: 1fr;
+    }
+    #contactos {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #contactos li {
+        flex-basis: auto;
+    }
+    section {
+        padding: 30px 15px;
+        margin: 15px auto;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+}
+
