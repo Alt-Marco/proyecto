@@ -1,180 +1,140 @@
-/* --- INICIO FASE 1: DISPOSICIÓN Y ESTRUCTURA --- */
+/* --- INICIO FASE 2: MEJORA DE DISEÑO Y ESTÉTICA --- */
+
+
+:root {
+    --primary-color: #2a4d8f;
+    --secondary-color: #B3CEFF;
+    --background-light: #f4f7fa;
+    --text-dark: #1a396b;
+    --success-color: #38c172;
+    --white: #ffffff;
+}
 
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
-    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Encabezado */
 header {
-    background-color: #B3CEFF;
-    color: #000;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .headerMenu {
-    cursor: pointer;
-    font-weight: bold;
+    color: #e0e6f0;
+    transition: color 0.3s ease, transform 0.3s ease;
     padding: 5px 10px;
+    border-radius: 4px;
 }
 
-#logoPrincipal {
-    display: block;
-    margin: 20px auto;
-    max-width: 150px;
-    height: auto;
+.headerMenu:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Secciones */
 section {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: var(--white);
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
 }
 
 section h2 {
-    color: #2a4d8f;
-    margin-bottom: 25px;
-    font-size: 2rem;
-    text-align: center;
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-#especialidades {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
+/* Especialidades */
 #especialidades li {
-    background-color: #B3CEFF;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 500;
-    text-align: center;
-    flex-basis: auto;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#equipo ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+#especialidades li:hover {
+    background-color: #92b8ff;
+    transform: scale(1.05);
 }
 
+/* Doctores */
 .doctor {
-    background-color: #f4f7fa;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
+    background-color: var(--background-light);
+    border: 1px solid #e0e6f0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.doctor:hover {
+    box-shadow: 0 10px 20px rgba(42, 77, 143, 0.2);
+    transform: translateY(-5px);
 }
 
 .doctor img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 10px;
+    border: 4px solid var(--secondary-color);
+    transition: border-color 0.3s ease;
 }
 
-#citaForm {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
+.doctor:hover img {
+    border-color: var(--primary-color);
 }
 
-#citaForm label, #citaForm input, #citaForm select, #citaForm button {
-    width: 100%;
+.doctor h4 {
+    color: var(--primary-color);
+    margin: 10px 0 5px;
 }
 
+/* Formulario */
+#citaForm label {
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-top: 10px;
+}
+
+#citaForm input[type="text"],
+#citaForm input[type="tel"],
+#citaForm select,
+#citaForm input[type="datetime-local"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+#citaForm button[type="submit"] {
+    background-color: var(--success-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+#citaForm button[type="submit"]:hover {
+    background-color: #2d995b;
+    transform: translateY(-1px);
+}
+
+/* Footer */
 footer {
-    background-color: #2a4d8f;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 0;
-}
-
-footer h2 {
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#contactos {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-#contactos li {
-    text-align: center;
-    flex-basis: 300px;
-}
-
-#contactos li h3 {
-    color: #B3CEFF;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-#contactos ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-footer a {
-    color: #B3CEFF;
-    text-decoration: none;
-    display: block;
+    background-color: var(--primary-color);
+    border-top: 5px solid var(--secondary-color);
 }
 
 footer a:hover {
     text-decoration: underline;
+    color: var(--white);
 }
 
-h2 {
-    text-align: center !important;
-    margin-left: 0 !important;
-}
+/* --- FIN FASE 2: MEJORA DE DISEÑO Y ESTÉTICA --- */
 
-h3 {
-    text-align: center;
-}
-
-li {
-    list-style-type: none;
-}
-
-/* --- FIN FASE 1: DISPOSICIÓN Y ESTRUCTURA --- */
