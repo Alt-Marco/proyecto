@@ -1,39 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('citaForm');
-    const mensaje = document.getElementById('mensaje');
+    const modal = document.getElementById('modalExito');
+    const modalMensaje = document.getElementById('modalMensaje');
+    const cerrarModalBtn = modal.querySelector('.cerrar');
+    const cerrarModalBtnInferior = modal.querySelector('.btn-cerrar-modal');
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function (event) {
+    
         event.preventDefault();
 
-        const nombre = document.getElementById('nombre').value.trim();
-        const telefono = document.getElementById('telefono').value.trim();
-        const especialidad = document.getElementById('especialidad').value;
-        const fechaHora = document.getElementById('fechaHora').value;
 
-        mensaje.textContent = ''; // Limpia el mensaje previo
+        const nombre = document.getElementById('nombre').value;
 
-        if (nombre === "" || telefono === "" || especialidad === "") {
-            mensaje.textContent = "Error: Por favor, complete todos los campos requeridos (Nombre, Teléfono y Especialidad).";
-            mensaje.style.color = 'red';
-            setTimeout(() => { mensaje.textContent = ''; }, 5000); 
-            return;
-        }
 
-        if (telefono.length < 8) {
-            mensaje.textContent = "Error: El número de teléfono parece incompleto o inválido (mínimo 8 dígitos).";
-            mensaje.style.color = 'red';
-            setTimeout(() => { mensaje.textContent = ''; }, 5000);
-            return;
-        }
-        
-        mensaje.textContent = `¡Solicitud enviada! Estimado(a) ${nombre}, confirmaremos su cita de ${especialidad} para el ${fechaHora} al ${telefono}.`;
-        mensaje.style.color = 'green';
-        
-        setTimeout(() => {
-            mensaje.textContent = '';
-        }, 7000);
+        modalMensaje.textContent = `Gracias, ${nombre}. Hemos recibido tu solicitud de cita. Nos pondremos en contacto contigo a la brevedad.`;
+
+      
+        modal.style.display = 'block';
+
         
         form.reset();
     });
-});
 
+    
+    function cerrarElModal() {
+        modal.style.display = 'none';
+    }
+
+    
+    cerrarModalBtn.addEventListener('click', cerrarElModal);
+    cerrarModalBtnInferior.addEventListener('click', cerrarElModal);
+
+
+    window.addEventListener('click', function (event) {
+        if (event.target == modal) {
+            cerrarElModal();
+        }
+    });
+});
