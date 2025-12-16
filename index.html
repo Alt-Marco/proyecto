@@ -8,112 +8,125 @@
 </head>
 
 <body>
+    <div id="background-particles"></div>
+
     <header>
-        <h1>Consultorio Dental</h1>
-        <ul style="display: flex;">
-            <li class="headerMenu">
-                Inicio
-            </li>
-            <li class="headerMenu">
-                Citas
-            </li>
-            <li class="headerMenu">
-                Doctores
-            </li>
-            <li class="headerMenu">
-                Acerca De
-            </li>
-        </ul>
+        <div class="logo-container">
+            <img src="/img/logo.jpg" alt="logo" id="logoPrincipal">
+            <h1>Consultorio Dental</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="headerMenu"><a href="#">
+                    Inicio</a>
+                </li>
+                <li class="headerMenu"><a href="#citas">
+                    Citas</a>
+                </li>
+                <li class="headerMenu"><a href="#equipo">
+                    Doctores</a>
+                </li>
+                <li class="headerMenu"><a href="#contactos">
+                    Acerca De</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <img src="/img/logo.jpg" alt="logo" id="logoPrincipal">
 
-    <section id="servicios">
-        <h2>Especialidades</h2>
-        <ul id="especialidades">
-            <li>
-                Ortodoncia
-            </li>
-            <li>
-                Endodoncia
-            </li>
-            <li>
-                Cirugía
-            </li>
-            <li>
-                Periodoncia
-            </li>
-            <li>
-                Odontopediatría
-            </li>
-        </ul>
-    </section>
+    <main>
+        <section id="servicios">
+            <h2>Especialidades</h2>
+            <ul id="especialidades">
+                <li>Ortodoncia</li>
+                <li>Endodoncia</li>
+                <li>Cirugía</li>
+                <li>Periodoncia</li>
+                <li>Odontopediatría</li>
+            </ul>
+        </section>
 
-    <section id="equipo">
-        <h2>Conoce a Nuestros Dentistas</h2>
-        <ul>
-            <li>
-                <div class="doctor">
-                    <img src="/img/1.jpg">
-                    <h4>Dr Dani</h4>
-                    <p>Ortodoncia</p>
-                </div>
-            </li>
-            <li>
-                <div class="doctor">
-                    <img src="/img/5.jpg">
-                    <h4>Dr Luis</h4>
-                    <p>Endodoncia</p>
-                </div>
-            </li>
-            <li>
-                <div class="doctor">
-                    <img src="/img/3.jpg">
-                    <h4>Dra Polo</h4>
-                    <p>Cirugía</p>
-                </div>
-            </li>
-            <li>
-                <div class="doctor">
-                    <img src="/img/4.jpg">
-                    <h4>Dr Javier</h4>
-                    <p>Periodoncia</p>
-                </div>
-            </li>
-            <li>
-                <div class="doctor">
-                    <img src="/img/2.jpg">
-                    <h4>Dra Godoy</h4>
-                    <p>Odontopediatría</p>
-                </div>
-            </li>
-        </ul>
-    </section>
+        <section id="equipo">
+            <h2>Conoce a Nuestros Dentistas</h2>
+            <ul>
+                <li>
+                    <div class="doctor">
+                        <img src="/img/1.jpg" alt="Foto del Dr. Dani">
+                        <div class="doctor-info">
+                            <h4>Dr. Dani</h4>
+                            <p>Ortodoncia</p>
+                            <p class="doctor-detail">Especialista en la corrección de la posición de los dientes y mandíbula. Utiliza las últimas técnicas en brackets y alineadores invisibles para niños y adultos.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="doctor">
+                        <img src="/img/5.jpg" alt="Foto del Dr. Luis">
+                        <div class="doctor-info">
+                            <h4>Dr. Luis</h4>
+                            <p>Endodoncia</p>
+                            <p class="doctor-detail">Experto en tratamientos de conducto radicular para salvar dientes dañados o infectados, aliviando el dolor y restaurando la función dental.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="doctor">
+                        <img src="/img/3.jpg" alt="Foto de la Dra. Polo">
+                        <div class="doctor-info">
+                            <h4>Dra. Polo</h4>
+                            <p>Cirugía Oral</p>
+                            <p class="doctor-detail">Realiza extracciones complejas, como las muelas del juicio, y otros procedimientos quirúrgicos para tratar enfermedades y lesiones de la boca.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="doctor">
+                        <img src="/img/4.jpg" alt="Foto del Dr. Javier">
+                        <div class="doctor-info">
+                            <h4>Dr. Javier</h4>
+                            <p>Periodoncia</p>
+                            <p class="doctor-detail">Dedicado al diagnóstico y tratamiento de enfermedades de las encías, como la gingivitis y periodontitis, y a la colocación de implantes dentales.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="doctor">
+                        <img src="/img/2.jpg" alt="Foto de la Dra. Godoy">
+                        <div class="doctor-info">
+                            <h4>Dra. Godoy</h4>
+                            <p>Odontopediatría</p>
+                            <p class="doctor-detail">Ofrece un cuidado dental integral y amigable para bebés, niños y adolescentes, enfocándose en la prevención y la creación de hábitos saludables.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-    <section id="citas">
-        <h2>Solicitar Cita</h2>
-        <form id="citaForm">
-            <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" required>
+        <section id="citas">
+            <h2>Solicitar Cita</h2>
+            <form id="citaForm">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" required>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required>
 
-            <label for="especialidad">Especialidad Requerida:</label>
-            <select id="especialidad" required>
-                <option value="">Seleccione una...</option>
-                <option value="Ortodoncia">Ortodoncia</option>
-                <option value="Endodoncia">Endodoncia</option>
-                <option value="Cirugía">Cirugía Maxilofacial</option>
-                <option value="Periodoncia">Periodoncia</option>
-                <option value="Odontopediatría">Odontopediatría</option>
-            </select>
-            <label for="fechaHora">Fecha y hora:</label>
-            <input type="datetime-local" id="fechaHora" name="fechaHora">
+                <label for="especialidad">Especialidad Requerida:</label>
+                <select id="especialidad" required>
+                    <option value="">Seleccione una...</option>
+                    <option value="Ortodoncia">Ortodoncia</option>
+                    <option value="Endodoncia">Endodoncia</option>
+                    <option value="Cirugía">Cirugía Maxilofacial</option>
+                    <option value="Periodoncia">Periodoncia</option>
+                    <option value="Odontopediatría">Odontopediatría</option>
+                </select>
+                <label for="fechaHora">Fecha y hora:</label>
+                <input type="datetime-local" id="fechaHora" name="fechaHora">
 
-            <button type="submit">Enviar Solicitud</button>
-            <p id="mensaje"></p>
-        </form>
-    </section>
+                <button type="submit">Enviar Solicitud</button>
+                <p id="mensaje"></p>
+            </form>
+        </section>
+    </main>
 
 
     <!-- Modal Emergente -->
@@ -130,37 +143,32 @@
         <h2>Contacto:</h2>
         <ul id="contactos">
             <li>
-                <div>
-                    <h3>Marco Ivan Altamirano</h3>
-                    <ul>
-                        <li><a href="https://github.com/Alt-Marco">GitHub: Alt-Marco</a></li>
-                        <li><a href="mailto:marcoivanalt@gmail.com">Correo electronico</a></li>
-                    </ul>
-                </div>
+                <h3>Marco Ivan Altamirano</h3>
+                <ul>
+                    <li><a href="https://github.com/Alt-Marco">GitHub: Alt-Marco</a></li>
+                    <li><a href="mailto:marcoivanalt@gmail.com">Correo electronico</a></li>
+                </ul>
             </li>
             <li>
-                <div>
-                    <h3>Arturo Emmanuel Solano Macias</h3>
-                    <ul>
-                        <li><a href="https://github.com/thearksmx">GitHub: thearksmx</a></li>
-                        <li><a href="mailto:solanomaciasarturo@gmail.com">Correo electronico</a></li>
-                    </ul>
-                </div>
+                <h3>Arturo Emmanuel Solano Macias</h3>
+                <ul>
+                    <li><a href="https://github.com/thearksmx">GitHub: thearksmx</a></li>
+                    <li><a href="mailto:solanomaciasarturo@gmail.com">Correo electronico</a></li>
+                </ul>
             </li>
             <li>
-                <div>
-                    <h3>Jonathan Eduardo Frutos Estrada</h3>
-                    <ul>
-                        <li><a href="https://github.com/byjona32">GitHub: byjona32</a></li>
-                        <li><a href="mailto:frutosestradajonathan@gmail.com">Correo electronico</a></li>
-                    </ul>
-                </div>
+                <h3>Jonathan Eduardo Frutos Estrada</h3>
+                <ul>
+                    <li><a href="https://github.com/byjona32">GitHub: byjona32</a></li>
+                    <li><a href="mailto:frutosestradajonathan@gmail.com">Correo electronico</a></li>
+                </ul>
             </li>
         </ul>
 
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
-<script src="script.js"></script>
-
 </html>
+
